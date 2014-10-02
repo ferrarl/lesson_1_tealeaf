@@ -88,3 +88,29 @@ if hit_stay == "n"
 else
 
 end
+
+
+ while dealertotal < 17
+  dealers_cards << deck.pop
+  puts "Dealer hit"
+  dealertotal = calculate_cards(dealers_cards)
+  puts "Dealers cards are now #{dealers_cards} which totals to #{dealertotal}"
+  break if dealertotal > 21
+  end
+
+if playerstotal > 21
+  puts "#{player} Busted"
+ elsif dealertotal > 21
+  puts "Dealer Busted"
+ elsif playerstotal == dealertotal
+  puts "Tie"
+ elsif playerstotal <= 21 && playerstotal > dealertotal
+  puts "#{player} Won!"
+ else
+  puts "Dealer Won"
+end
+
+puts "Play again? (y/n)"
+play_again= gets.chomp.downcase
+break if play_again == "n"
+end
