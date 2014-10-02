@@ -96,7 +96,7 @@ end
   dealertotal = calculate_cards(dealers_cards)
   puts "Dealers cards are now #{dealers_cards} which totals to #{dealertotal}"
   break if dealertotal > 21
-  end
+end
 
 if playerstotal > 21
   puts "#{player} Busted"
